@@ -1,0 +1,27 @@
+{
+  "name": "SamConnect_Challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "author": "Maicon Marioto",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "config": "^1.20.1",
+    "cors": "^2.8.4",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.15",
+    "morgan": "^1.7.0",
+    "use-strict": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "cross-env": "^5.0.5",
+    "mocha": "^2.4.5"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "cross-env  NODE_ENV=test mocha --timeout 10000"
+  }
+}
