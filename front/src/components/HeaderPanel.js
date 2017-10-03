@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderForm from './HeaderForm';
 import Title from './common/Title';
-import './style.css';
+import css from './style.css';
 
 const HeaderPanel = props => (
   <div className="jumbotron jumbotron-fluid jumbotron-light-blue">

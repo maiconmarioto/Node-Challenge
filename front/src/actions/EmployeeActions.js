@@ -1,21 +1,19 @@
 import axios from 'axios';
+import {
+  FETCH_EMPLOYEES,
+  FETCH_EMPLOYEES_SUCCESS,
+  FETCH_EMPLOYEES_ERROR,
+  CREATE_EMPLOYEE,
+  CREATE_EMPLOYEE_SUCCESS,
+  CREATE_EMPLOYEE_ERROR,
+  DOING_REQUEST
+} from './type';
 
-export const FETCH_EMPLOYEES = 'FETCH_EMPLOYEES';
-export const CREATE_EMPLOYEE = 'CREATE_EMPLOYEE';
-export const DOING_REQUEST = 'DOING_REQUEST';
-
-const ROOT_URL = 'http://localhost:3000';
+export const ROOT_URL = 'http://localhost:3000';
 
 export function fetchEmployees() {
-  const url = `${ROOT_URL}/employees`;
-
-  return dispatch => {
-    axios.get(url).then(response =>
-      dispatch({
-        type: FETCH_EMPLOYEES,
-        payload: response.data
-      })
-    );
+  return {
+    type: FETCH_EMPLOYEES
   };
 }
 
@@ -26,14 +24,8 @@ export function doingRequest() {
 }
 
 export const createEmployee = ({ name, lastName, participation }) => {
-  const url = `${ROOT_URL}/employees`;
-
-  return dispatch => {
-    axios.post(url, { name, lastName, participation }).then(response =>
-      dispatch({
-        type: CREATE_EMPLOYEE,
-        payload: response.data
-      })
-    );
+  return {
+    type: CREATE_EMPLOYEE,
+    payload: { name, lastName, participation }
   };
 };

@@ -23,15 +23,15 @@ const Chart = props => {
     };
 
     legend = {
-      display: true,
-      position: 'bottom',
-      fullWidth: false,
-      reverse: true
+      display: false,
+      position: 'top',
+      fullWidth: true,
+      reverse: false
     };
   }
 
   return (
-    <div className="container w-100">
+    <div className="container w-100 chartjs">
       <Doughnut data={data} legend={legend} />
     </div>
   );

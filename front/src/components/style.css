@@ -1,5 +1,6 @@
 .jumbotron-light-blue {
-  background-color: #00b8e1; padding: 20px;
+  background-color: #00b8e1;
+  padding: 20px;
 }
 
 .m-top-10 {
@@ -17,13 +18,13 @@
 .btn-info-plus {
   border: 2px solid #ffffff;
   background-color: #00b8e1;
-  margin-bottom: 17px !important;
+  margin-bottom: 17px;
   cursor: pointer;
   color: white;
 }
 
 /* Ripple magic */
-.btn-info-plus{
+.btn-info-plus {
   position: relative;
   overflow: hidden;
 }
@@ -35,7 +36,7 @@
   left: 50%;
   width: 5px;
   height: 5px;
-  background: rgba(255, 255, 255, .5);
+  background: rgba(255, 255, 255, 0.5);
   opacity: 0;
   border-radius: 100%;
   transform: scale(1, 1) translate(-50%);
@@ -67,4 +68,14 @@
 
 .p-top-40 {
   padding-top: 40px;
+}
+
+.has-error {
+  border-color: red;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.075);
+}
+
+.has-error:focus {
+  border-color: red;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.075);
 }

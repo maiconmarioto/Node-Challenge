@@ -2,15 +2,17 @@
   "name": "@maiconmarioto/react-starter",
   "version": "1.0.0",
   "description": "Starter kit for react with code splitting using react-router 4",
-  "author": "Louis DeScioli <louis.descioli@gmail.com>",
+  "author": "Maicon Marioto <maicon.maraioto@gmail.com>",
   "repository": "https://github.com/maiconmarioto/react-starter",
   "license": "MIT",
   "scripts": {
     "clear": "rimraf dist",
-    "build": "rimraf dist && npm run clear && cross-env NODE_ENV=production webpack -p --env.prod=true",
+    "build": "npm run clear && cross-env NODE_ENV=production webpack -p --env.prod=true",
     "start": "webpack-dev-server --content-base src --hot --inline",
     "analyze": "cross-env NODE_ENV=production webpack-dev-server --env.analyze=true",
-    "analyze-prod": "cross-env NODE_ENV=production webpack-dev-server --env.prod=true --env.analyze=true"
+    "analyze-prod": "cross-env NODE_ENV=production webpack-dev-server --env.prod=true --env.analyze=true",
+    "test": "mocha --compilers js:babel-core/register --require ignore-styles --require ./test/TestHelper.js --recursive ./test",
+    "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -25,6 +27,7 @@
     "redux": "^3.7.1",
     "redux-form": "^6.8.0",
     "redux-logger": "^3.0.6",
+    "redux-saga": "^0.15.6",
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
@@ -39,10 +42,17 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "chai": "^3.5.0",
+    "chai-jquery": "^2.0.0",
     "cross-env": "^5.0.1",
     "css-loader": "^0.28.4",
     "faker": "^4.1.0",
     "html-webpack-plugin": "^2.29.0",
+    "ignore-styles": "^5.0.1",
+    "jquery": "^2.2.1",
+    "jsdom": "^8.1.0",
+    "mocha": "^2.4.5",
     "rimraf": "^2.6.1",
     "style-loader": "^0.18.2",
     "webpack": "2.6.1",
