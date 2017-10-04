@@ -57,6 +57,7 @@ class HeaderForm extends Component {
 
     if (name && lastName && participation) {
       this.props.createEmployee({ name, lastName, participation });
+      this.setState({name: '', lastName: '', participation: ''});
     }
   }
 
